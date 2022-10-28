@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --c-atlantic: #1B2473;
+  --c-deepsea: #1A226B;
+  --c-darkgrey: #787878;
+  --c-lightgrey: #CCCCCC;
+  --c-snowwhite: #FFFFFF;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.background {
+  background-color: var(--c-atlantic);
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.card {
+  max-width: 600px;
+  left: 0;
+  right: 0;
+  padding-top: 0px;
+  border: 1px solid var(--c-darkgrey);
+  padding-bottom: 0px;
+  position: absolute;
+  background-color: var(--c-snowwhite);
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.card__h1 {
+  color: var(--c-darkgrey);
+  display: flex;
+  vertical-align: middle;
+}
+
+.card__header:not(:last-child) {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.card__email-field {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  align: left;
+}
+
+.card__password-field {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  line-height: 36px;
+  color: var(--cc-darkgrey);
+  border: 2px solid var(--c-darkgrey);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.agreement__checkbox {
+  transform: scale(1.3);
+  opacity: 0.9;
+  margin-right: 5px;
+}
+
+.agreement__note {
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--c-darkgrey);
+  text-align: left;
+}
+
+.card__footer {
+  margin: 0 auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: calc((26 / 1440) * 100vw);
+}
+
+.button {
+  color: var(--c-snowwhite);
+  position: relative;
+  outline: none;
+  border-radius: 10px;
+  background: var(--c-deepsea);
+  font-weight: 700;
+  display: block;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 769px) {
+
+  .card {
+    top: calc((82 / 1440) * 100vw);
+    width: calc((600 / 1440) * 100vw);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card__submit-button {
+    width: calc((180 / 1440) * 100vw);
+    height: calc((52 / 1440) * 100vw);
+    font-size: calc((24 / 1440) * 100vw);
+  }
+
+  .card__h1 {
+    font-size: calc((50 / 1440) * 100vw);
+  }
+
+  .card__header {
+    width: calc((115 / 1440) * 100vw);
+    height: calc((50 / 1440) * 100vw);
+    margin-top: calc((26 / 1440) * 100vw);
+  }
+
+  .card__email-field {
+    margin-top: calc((17 / 1440) * 100vw);
+    width: calc((510 / 1440) * 100vw);
+    height: calc((70 / 1440) * 100vw);
+  }
+
+  .label {
+    font-size: calc((16 / 1440) * 100vw);
+  }
+
+  .input {
+    font-size: calc((28 / 1440) * 100vw);
+    width: calc((510 / 1440) * 100vw);
+    height: calc((49 / 1440) * 100vw);
+    border: 2px solid var(--c-darkgrey);
+    border-radius: 10px;
+  }
+
+  .card__password-field {
+    margin-top: calc((12 / 1440) *100vw);
+    width: calc((510 / 1440) * 100vw);
+    height: calc((70 / 1440) * 100vw);
+  }
+
+  .card__agreement-section {
+    margin-left: calc((45 / 1440) * 100vw);
+    margin-top: calc((12 / 1440) * 100vw);
+    width: calc((510 / 1440) * 100vw);
+    height: calc((24 / 1440) * 100vw);
+  }
+
+  .agreement__note {
+    font-size: calc((14 / 1440) * 100vw);
+    margin-top: 0.3em;
+  }
+
+  .card__footer {
+    margin: 0 auto;
+    width: auto;
+    margin-top: calc((56 / 1440) * 100vw);
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+
+  .card {
+    top: 3%;
+    max-width: 728px;
+    max-height: 697px;
+    width: calc((728 / 768) * 100vw);
+    height: calc(100vh - 6%);
+  }
+
+  .container {
+    max-width: 768px;
+    max-height: 100vh;
+  }
+
+  .card__submit-button {
+    width: calc((220 / 768) * 100vw);
+    height: calc((80 / 768) * 100vw);
+    font-size: calc((32 / 768) * 100vw);
+  }
+
+  .card__h1 {
+    font-size: calc((60 / 768) * 100vw);
+  }
+
+  .card__header {
+    width: calc((138 / 768) * 100vw);
+    height: calc((50 / 768) * 100vw);
+    margin-top: calc((38 / 768) * 100vw);
+  }
+
+  .card__email-field {
+    margin-top: calc((17 / 768) * 100vw);
+    width: calc((638 / 768) * 100vw);
+    height: calc((75 / 768) * 100vw);
+  }
+
+  .label {
+    font-size: calc((24 / 768) * 100vw);
+  }
+
+  .input {
+    font-size: calc((28 / 768) * 100vw);
+    width: calc((638 / 768) * 100vw);
+    height: calc((49 / 768) * 100vw);
+    border: 2px solid var(--c-darkgrey);
+    border-radius: 10px;
+  }
+
+  .card__password-field {
+    margin-top: calc((12 / 768) * 100vw);
+    width: calc((638 / 768) * 100vw);
+    height: calc((75 / 768) * 100vw);
+  }
+
+  .card__agreement-section {
+    margin-left: calc((45 / 768) * 100vw);
+    margin-top: calc((12 / 768) * 100vw);
+    width: calc((638 / 768) * 100vw);
+    height: calc((32 / 768) * 100vw);
+  }
+
+  .agreement__note {
+    font-size: calc((14 / 768) * 100vw);
+  }
+
+  .card__footer {
+    width: auto;
+    margin-top: calc((56 / 768) * 100vw);
+  }
+}

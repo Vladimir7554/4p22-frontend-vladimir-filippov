@@ -1,0 +1,154 @@
+/* Сброс браузерных стилей */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Изменяем вид текста ссылок при наведении */
+
+a {
+  color: #0075B2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #CE242B;
+  text-decoration: underline;
+}
+
+/* Настроки для хедера по умолчанию */
+
+.default-header {
+  background: blue;
+  color: wheat;
+  position: static;
+  width: 100%;
+  max-width: 1500px;
+  height: 80px;
+  font-size: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Разметка позиционируемых элементов страницы и БЭМ свойства */
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.content__inner {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1%;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content_aside {
+  width: 30%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  flex-shrink: 0;
+  position: sticky;
+  background-color: yellowgreen;
+  border: 4px double black;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu__title {
+  background-color: blue;
+  color: white;
+  font-size: 15px;
+  height: 60px;
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__item {
+  background-color: bisque;
+}
+
+.menu_link {
+  font-size: 150px;
+}
+
+.address-book {
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  border: 2px solid black;
+}
+
+.address-book__title {
+  background-color: wheat;
+  color: blue;
+  font-size: 15px;
+  height: 60px;
+  text-align: center;
+}
+
+.address-book__list {
+  list-style: none;
+}
+
+.address-book__item {
+  word-wrap: break-word;
+  background-color: bisque;
+}
+
+.address-book-card {
+  text-align: left;
+  font-size: 15px;
+}
+
+.address-book-card__letter {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 4px 13px;
+  background-color: blue;
+  color: white;
+  font-size: 150%;
+  height: 60px;
+  text-align: center;
+}
+
+/* Общие параметры для всей страницы */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 15px;
+}

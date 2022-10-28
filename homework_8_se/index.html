@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Simple calc</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="form">
+      <header class="form_element">
+        <h1>Калькулятор</h1>
+      </header>
+      <div class="form_element">
+        <label for="chislo_1">Число 1 (цифры)</label>
+        <input id="chislo_1">
+      </div>
+      <div class="form_element">
+        <label for="operation">Операция ( + , - , * , / )</label>
+        <input id="operation">
+      </div>
+      <div class="form_element">
+        <label for="chislo_2">Число 2 (цифры)</label>
+        <input id="chislo_2">
+      </div>
+      <footer class="form_element">
+        <button onclick="func()">Рассчет</button>
+      </footer>
+    </form>
+  </div>
+
+  <script>
+    'use strict';
+
+    function func() {
+      let num1 = document.getElementById("chislo_1").value;
+      let num2 = document.getElementById("chislo_2").value;
+      let op = document.getElementById("operation").value;
+      let trimmedNum1 = num1.trim();
+      let trimmedNum2 = num2.trim();
+      let trimmedOp = op.trim();
+
+      let trimmedNum1Error;
+      let trimmedNum2Error;
+      let trimmedNumError;
+      let trimmedNumsError;
+      let trimmedOpError;
+      let OperCountError;
+      let OperSupportError;
+      let MathResultError; 
+
+      let result;
+      let resultPrefix = ('Полученный результат:');
+      let finish = [];
+
+
+      if (isNaN(trimmedNum1) === true || isNaN(trimmedNum2) === true) { trimmedNumError === 1; }
+      else if (trimmedNum1 == '' && trimmedNum2 == '') {TrimmedNumsError === 1;}
+      else if (trimmedNum1 == '') {TrimmedNum1Error === 1;}
+      else if (trimmedNum2 == '') {TrimmedNum2Error === 1;}
+      else { 
+        
+        switch (trimmedOp) {
+          case '+': result = Number(trimmedNum1) + Number(trimmedNum2); break;
+          case '-': result = Number(trimmedNum1) - Number(trimmedNum2); break;
+          case '*': result = Number(trimmedNum1) * Number(trimmedNum2); break;
+          case '/': result = Number(trimmedNum1) / Number(trimmedNum2); break;
+          case '': finish.push("Пустой оператор"); break;
+          default : finish.push("Не поддерживаемый оператор"); break;
+        }
+
+       if (trimmedNumError === 1) { finish.push("Ошибка обоих чисел"); }
+       else if (trimmedNumsError === 1) { finish.push("Пустые числа"); }
+       else if (trimmedNum1Error === 1) { finish.push("Пустое число 1"); }
+       else if (trimmedNum2Error === 1) { finish.push("Пустое число 2"); }
+       else if (MathResultError === 1) { finish.push("Арифметическая ошибка"); }
+      }
+      
+       alert(resultPrefix + finish + result);
+
+    }
+
+  </script>
+
+</body>
+
+</html>

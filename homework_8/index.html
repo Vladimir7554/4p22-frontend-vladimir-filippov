@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Simple calc</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="form">
+      <header class="form_element">
+        <h1>Калькулятор</h1>
+      </header>
+      <div class="form_element">
+        <label for="chislo_1">Число 1 (цифры)</label>
+        <input id="chislo_1">
+      </div>
+      <div class="form_element">
+        <label for="operation">Операция ( + , - , * , / )</label>
+        <input id="operation">
+      </div>
+      <div class="form_element">
+        <label for="chislo_2">Число 2 (цифры)</label>
+        <input id="chislo_2">
+      </div>
+      <footer class="form_element">
+        <button onclick="func()">Рассчет</button>
+      </footer>
+    </form>
+  </div>
+
+  <script>
+    'use strict';
+
+    function func() {
+      let num1 = document.getElementById("chislo_1").value;
+      let num2 = document.getElementById("chislo_2").value;
+      let op = document.getElementById("operation").value;
+      let trimmedNum1 = num1.trim();
+      let trimmedNum2 = num2.trim();
+      let trimmedOp = op.trim();
+      let result;
+      let resultPrefix = ('Полученный результат:');
+      if (isNaN(trimmedNum1) === true || isNaN(trimmedNum2) === true) {
+        result = 'Некорректный ввод чисел';
+        alert(resultPrefix + " " + result);
+        console.log('Некорректный ввод чисел');
+      } else if (trimmedNum1 == '' && trimmedNum2 == '') {
+        result = 'Оба числа не указаны или использованы пробелы при вводе';
+        alert(resultPrefix + " " + result);
+        console.log(result);
+      } else if (trimmedNum1 == '') {
+        result = 'Число 1 не указано или использованы пробелы при вводе';
+        alert(resultPrefix + " " + result);
+        console.log(result);
+      } else if (trimmedNum2 == '') {
+        result = 'Число 2 не указано или использованы пробелы при вводе';
+        alert(resultPrefix + " " + result);
+        console.log(result);
+      } else {
+        switch (trimmedOp) {
+          case '+':
+            result = Number(trimmedNum1) + Number(trimmedNum2);
+            break;
+          case '-':
+            result = Number(trimmedNum1) - Number(trimmedNum2);
+            break;
+          case '*':
+            result = Number(trimmedNum1) * Number(trimmedNum2);
+            break;
+          case '/':
+            result = Number(trimmedNum1) / Number(trimmedNum2);
+            break;
+          case '':
+            result = 'Не введён знак операции или использованы пробелы при вводе значения';
+            break;
+          default:
+            result = 'Программа не поддерживает такую операцию';
+            break;
+        }
+        if (result === Infinity) {
+          alert('Полученный результат: Операция некорректна с точки зрения арифметики и результат решено не отображать');
+          console.log('Полученный результат: Операция некорректна с точки зрения арифметики и результат решено не отображать');
+        } else {
+          alert(resultPrefix + " " + result);
+          console(result);
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

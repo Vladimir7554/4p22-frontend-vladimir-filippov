@@ -1,0 +1,78 @@
+a {
+color: #0075B2;
+text-decoration: none;
+ }
+ 
+a:hover {
+color: #CE242B;
+text-decoration: underline;
+ }
+
+header {
+font-size: 38px;
+text-align: left;
+background-color: #231f20;
+color: white;
+height: 400px;
+left: 0;
+width: 100%;
+}
+
+.red_class {
+background-color: rgb(227, 87, 87);
+}
+.blue_class {
+background-color: rgb(125, 125, 212);
+}
+.green_class {
+background-color: rgb(46, 180, 46);
+}
+.yellow_class {
+background-color: rgb(221, 221, 32);
+}
+.border_class {
+background-color: #808990;
+}
+
+footer {
+background-color: #231f20;
+color: white;
+display: block;
+height: 150px;
+left: 0;
+width: 100%;
+text-align: left;
+}
+
+table { 
+table-layout: fixed;
+width: 100%; 
+border: 1;
+border-spacing: 10;
+}
+
+.table_class1 {
+word-break: normal
+}
+.table_class2 {
+word-break: normal;
+}
+
+caption {
+color: white;
+text-align: left;
+padding: 10px 0;
+font-size: 35px;
+background-color: #231f20;
+}
+
+td, th {
+border: solid 0px;
+font-size: 15px;
+text-align: center;
+}
+
+tr {
+text-align: center;
+padding: 10px;
+}

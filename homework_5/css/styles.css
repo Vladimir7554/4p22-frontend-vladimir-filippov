@@ -1,0 +1,108 @@
+/* Сброс браузерных стилей */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Изменяем вид текста ссылок при наведении */
+
+a {
+  color: #0075B2;
+  text-decoration: none;
+  font-size: 250%;
+}
+
+a:hover {
+  color: #CE242B;
+  text-decoration: underline;
+  font-size: 250%;
+}
+
+/* Настроки для хедера по умолчанию */
+
+.default-header {
+  background: blue;
+  color: wheat;
+  position: static;
+  width: 100%;
+  max-width: 2000px;
+  height: 100px;
+  left: 20px;
+  font-size: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Разметка позиционируемых элементов страницы и БЭМ свойства */
+
+.content {
+  left: 40px;
+  top: 25px;
+  position: relative;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 50px;
+}
+
+.content_aside {
+  width: 30%;
+  height: 550px;
+  top: 0px;
+  left: 30px;
+  position: sticky;
+  background-color: yellowgreen;
+  border: 4px double black;
+}
+
+.menu {
+ text-align: center;
+ text-decoration: double;
+}
+
+.menu__list {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu__item {
+  background-color: bisque;
+}
+
+.address-book {
+  top: 0px;
+  width: 95%;
+  height: 100%;
+  left: 0px;
+  border: 2px solid black;
+}
+
+.address-book__list {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.address-book__item {
+  word-wrap: break-word;
+  background-color: bisque;
+}
+
+.address-book-card {
+  text-align: left;
+}
+
+/* Общие параметры для всей страницы */
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  background-color: blue;
+  color: white;
+  font-size: 150%;
+  height: 15%;
+  text-align: center;
+}

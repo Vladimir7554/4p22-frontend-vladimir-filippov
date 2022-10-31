@@ -46,25 +46,18 @@
       let trimmedNum2 = num2.trim();
       let trimmedOp = op.trim();
 
-      let trimmedNum1Error;
-      let trimmedNum2Error;
-      let trimmedNumError;
-      let trimmedNumsError;
-      let trimmedOpError;
-      let OperCountError;
-      let OperSupportError;
-      let MathResultError; 
-
       let result;
+      let error = ('Результат не может быть вычислен');
       let resultPrefix = ('Результат:');
       let resultPostfix = ('Ошибки:');
       let finish = [];
 
 
-      if (isNaN(trimmedNum1) === true || isNaN(trimmedNum2) === true) { finish.push("Ошибка ввода чисел"); }
-      if (trimmedNum1 == '' && trimmedNum2 == '') { finish.push("Пустые числа"); }
-      if (trimmedNum1 == '' && trimmedNum2 !== '') { finish.push("Пустое число 1"); }
-      if (trimmedNum2 == '' && trimmedNum1 !== '') { finish.push("Пустое число 2"); }
+      if (isNaN(trimmedNum1) === true || isNaN(trimmedNum2) === true) { finish.push("Ошибка ввода чисел"); result = error }
+      if (trimmedNum1 == '' && trimmedNum2 == '') { finish.push("Пустые числа"); result = error }
+      if (trimmedNum1 == '' && trimmedNum2 !== '') { finish.push("Пустое число 1"); result = error }
+      if (trimmedNum2 == '' && trimmedNum1 !== '') { finish.push("Пустое число 2"); result = error }
+      if (trimmedOp == '') { finish.push("Пустой оператор"); result = error }
       else { 
         
         switch (trimmedOp) {
@@ -72,15 +65,15 @@
           case '-': result = Number(trimmedNum1) - Number(trimmedNum2); break;
           case '*': result = Number(trimmedNum1) * Number(trimmedNum2); break;
           case '/': result = Number(trimmedNum1) / Number(trimmedNum2); break;
-          case '': finish.push("Пустой оператор");break;
-          default : finish.push('Некорректный оператор');break;
+          default : finish.push('Некорректный оператор'); result = error;break;
         }
       }
       
-      if (result == Infinity) { finish.push("Арифметическая ошибка"); }
-      if (result == undefined) { result = 'Результат не может быть вычислен'}
-      if (result == 0) { result = 'Результат не может быть вычислен'}
-      if (result == NaN) { result = 'Результат не может быть вычислен'}
+      if (result == Infinity) { result = error; finish.push("Арифметическая недопустимость"); }
+      if (result == undefined) { result = error}
+      if (result == 0) { result = error }
+      if (finish == "") {finish.push('Ошибок нет!')}
+      if (isNaN(result) === true) {result = error}
 
       alert(resultPrefix + " " + result + '\n' + resultPostfix + " " + " " + finish);
 

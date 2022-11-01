@@ -1,56 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Fibronacci generator</title>
+  <script src="./script.js"></script>
+  <title>Fibonacci generator</title>
 </head>
+
 <body>
-  
-  <div class="container">
-    <form class="form">
-      <header class="form_element">
-        <h1>Генератор</h1>
-        <h2>Фиброначчи</h2>
-      </header>
-      <div class="form_element">
-        <label for="input">Отображаем результат:</label>
-        <input id="input">
-      </div>
-      <footer class="form_element">
-        <button onclick="fibonaci()">Рассчет</button>
-      </footer>
-    </form>
-  </div>
-
-<script>
-
-  'use strict';
-
-  function func() {
-
-  let a = 1;
-  let b = 1;
-  for (let i = 3; i <= n; i++) {
-    let c = a + b;
-    a = b;
-    b = c;
-  }
-  return b;
-  
-
-function fibonaci() {
-return 1;
-}
-
-}
-
-document.getElementById("input").value = func();
-
-
-</script>
-
+  <button onclick="getFibonacci()">Some magic...</button>
+  <input id="input" />
 </body>
+
 </html>

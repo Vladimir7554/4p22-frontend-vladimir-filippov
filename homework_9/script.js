@@ -1,11 +1,12 @@
 const getFibonacci = ((a = 0, b = 1) => () => {
 
-  const c = (a + b);
+  const c = a + b;
+  const inputNode = document.getElementById('input');
   a = b;
   b = c;
-  document.getElementById('input').value = a;
+  inputNode.value = a;
   console.log(a);
-  return (a);
+  return a;
 
 })()
 

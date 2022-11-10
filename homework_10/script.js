@@ -1,5 +1,5 @@
-url = 'https://reqres.in/api/users?per_page=12'
-urlF = 'https://reqres.in/api/users?per_page=1'
+const url = 'https://reqres.in/api/users?per_page=12'
+const urlF = 'https://reqres.in/api/users?per_page=1'
 
 
 const totalUserList = () => {

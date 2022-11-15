@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="./script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,regular,italic,500,700,900," rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet">
+  <title>Registration form</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="banner-header">
+      <a class="banner-logo" href="#"><img class="banner-logo__image" alt="Логотип" src="./images/inno.png"
+          loading="lazy"></a>
+      <div class="banner-coursename">PCS Frontend</div>
+    </div>
+    <div class="banner-sign">
+      <a class="banner-sign__target banner-sign__target--focused" href="#" title="Регистрация">Регистрация</a>
+      <a class="banner-sign__target" href="./index.html" title="Вход в систему">Вход</a>
+    </div>
+  </header>
+  <div class="background container">
+    <form class="card card__measures-reg" data-js-form>
+      <h1 class="card__header">Регистрация</h1>
+      <div class="card__input">
+        <label for="email" class="label">
+          <span class="input__label">* Email</span>
+          <span class="input__error" email-js-input-error></span></label>
+        <input id="email" class="input email-field" type="email" name="card-group" placeholder="Почта">
+      </div>
+      <div class="card__input">
+        <label for="password" class="label">
+          <span class="input__label">* Пароль</span>
+          <span class="input__error" password-js-input-error></span></label>
+        </label>
+        <input id="password" class="input password-field-reg" type="password" name="card-group"
+          placeholder="Введите пароль">
+      </div>
+      <div class="card__input">
+        <label for="password2" class="label">
+          <span class="input__label">* Подтверждение пароля</span>
+          <span class="input__error" password2-js-input-error></span></label>
+        <input id="password2" class="input password-field-reg" type="password" name="card-group"
+          placeholder="Подтвердите пароль">
+      </div>
+      <div class="card__radio-field radio-selector">
+        <div class="legend">Пол</div>
+        <div class="radio-selector__block">
+          <input id="radio-male" class="radio-selector__button" type="radio" name="radio-group" value="Мужчина">
+          <label for="radio-male" class="radio-label">Мужчина</label>
+        </div>
+        <div class="radio-selector__block">
+          <input id="radio-female" class="radio-selector__button" type="radio" name="radio-group" value="Женщина">
+          <label for="radio-female" class="radio-label">Женщина</label>
+        </div>
+      </div>
+      <div class="card__textarea-section">
+        <label for="textareas" class="label">О себе</label>
+        <textarea id="textareas" name="textarea" class="input-textarea" placeholder="Расскажите о себе"></textarea>
+      </div>
+      <div class="card__agreement-section">
+        <input id="checkbox" class="agreement__checkbox" type="checkbox" name="agreement">
+        <label for="checkbox" class="agreement__note">Я согласен получать обновления на почту</label>
+      </div>
+      <footer class="card__footer">
+        <button class="card__submit-button button" type="submit">Регистрация</button>
+      </footer>
+    </form>
+  </div>
+</body>
+
+</html>
